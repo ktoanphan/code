@@ -14,5 +14,30 @@ public class Hello {
 				}
 			}
 		}
+
+		Int[][][] M = new Int[width][height][9];
+        for (int x0 = 0; x0 < width; x0 += 1) {
+
+            for (int y0 = 0; y0 < height; y0 += 1) {
+
+                int[][] places0 = M[x0][y0];
+
+                for (int dir = 1; dir <= 8; dir += 1) {  // dir = 0 -> dir = 1
+                    places0[dir] = new int[];
+                }
+
+                for (int x1 = 0; x1 < width; x1 += 1) { //x0->x1
+
+                    for (int y1 = 0; y1 < height; y1 += 1) {
+                    	
+                        int dir = dirOf(x0, y0, x1, y1);
+                        Place p = pl(x1, y1);
+                        places0[dir].add(p);
+                        places0[0].add(p);
+                    }
+                }
+            }
+        }
+
 	}
 }
