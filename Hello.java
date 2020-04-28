@@ -6,26 +6,16 @@ import java.lang.String;
 public class Hello {
 
     public static void main(String[ ] args) {
-        int a = (byte) (64*2);
-        System.out.println(a);
-
-        ArrayList<Integer> intArr = new ArrayList<>();
-
-        for (int i = 0; i < 100; i++) {
-            intArr.add(i);
+        for (int i = 0; i < 100; i ++) {
+            System.out.println("i: " + i);
+            for (int j = 0; j < i; j++) {
+                System.out.println("j: " + j);
+                for (int k = 0; k < j; k++) {
+                    System.out.println("k: " + k);
+                    System.out.println("move");
+                }
+            }
         }
-
-        int[] arr = new int[16];
-        for (int i = 0; i < arr.size(); i += 1) {
-            arr.set(i, i % 8);
-        }
-
-        System.out.println(Integer.toBinaryString(156));
-        System.out.println(intArr);
-
-
 
     }
-
-
 }
