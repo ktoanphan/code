@@ -5,6 +5,12 @@ import java.lang.String;
 
 public class Hello {
 
+
+    public abstract class Traverser {
+        @Override
+        protected abstract void previsit(Digraph)
+    }
+
     public static void main(String[ ] args) {
         for (int i = 0; i < 100; i ++) {
             System.out.println("i: " + i);
