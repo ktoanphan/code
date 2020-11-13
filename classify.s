@@ -12,6 +12,7 @@ classify:
     #               you should print the classification. Otherwise,
     #               this function should not print ANYTHING.
     # Returns:
+    #   a0 (int)    Classification
     # Exceptions:
     # - If there are an incorrect number of command line args,
     #   this function terminates the program with exit code 89.
@@ -23,6 +24,7 @@ classify:
 
     # BEGIN PROLOGUE
     addi sp, sp -52
+    sw ra, 0(sp)
     sw s0, 4(sp)            # cols of input
     sw s1, 8(sp)
     sw s2, 12(sp)
